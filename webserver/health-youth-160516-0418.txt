@@ -1,0 +1,100 @@
+
+#####################################################################
+    Health Check Report (CPU,Process,Disk Usage, Memory)
+#####################################################################
+
+
+Hostname         : youth
+Kernel Version   : 3.2.0-4-686-pae
+Uptime           : 14:56
+Last Reboot Time : 2016-05-15 13:22
+
+
+
+*********************************************************************
+CPU Load - > Threshold < 1 Normal > 1 Caution , > 2 Unhealthy 
+*********************************************************************
+
+Please install mpstat!
+On Debian based systems:
+sudo apt-get install sysstat
+On RHEL based systems:
+yum install sysstat
+
+*********************************************************************
+                             Process
+*********************************************************************
+
+=> Top memory using processs/application
+
+PID %MEM RSS COMMAND
+6731 7.5 154656 (squid-1)
+2673 1.6 34128 /usr/sbin/mysqld
+5956 0.3 8124 /usr/sbin/apache2
+5966 0.2 4436 /usr/sbin/apache2
+5967 0.2 4436 /usr/sbin/apache2
+5968 0.2 4436 /usr/sbin/apache2
+5969 0.2 4436 /usr/sbin/apache2
+5970 0.2 4436 /usr/sbin/apache2
+7928 0.1 3108 sshd:
+7809 0.1 3072 sshd:
+
+=> Top CPU using process/application
+  PID USER      PR  NI  VIRT  RES  SHR S  %CPU %MEM    TIME+  COMMAND
+    1 root      20   0  2300  724  624 S   0.0  0.0   0:01.06 init
+    2 root      20   0     0    0    0 S   0.0  0.0   0:00.00 kthreadd
+    3 root      20   0     0    0    0 S   0.0  0.0   0:01.70 ksoftirqd/0
+    6 root      rt   0     0    0    0 S   0.0  0.0   0:00.00 migration/0
+    7 root      rt   0     0    0    0 S   0.0  0.0   0:00.05 watchdog/0
+    8 root      rt   0     0    0    0 S   0.0  0.0   0:00.00 migration/1
+   10 root      20   0     0    0    0 S   0.0  0.0   0:01.53 ksoftirqd/1
+   11 root      20   0     0    0    0 S   0.0  0.0   0:00.84 kworker/0:1
+   12 root      rt   0     0    0    0 S   0.0  0.0   0:00.04 watchdog/1
+   13 root       0 -20     0    0    0 S   0.0  0.0   0:00.00 cpuset
+
+*********************************************************************
+Disk Usage - > Threshold < 90 Normal > 90% Caution > 95 Unhealthy
+*********************************************************************
+
+rootfs / 41% used 16G free space
+
+udev /dev 0% used 10M free space
+
+tmpfs /run 1% used 199M free space
+
+/dev/disk/by-uuid/dfe2166c-b843-4f1f-a7fc-8dcca71cf087 / 41% used 16G free space
+
+tmpfs /run/lock 0% used 5.0M free space
+
+tmpfs /run/shm 1% used 587M free space
+
+/dev/sda6 /cache 90% used 4.5G free space
+
+
+
+Heath Status
+
+rootfs / 		 Normal
+udev /dev 		 Normal
+tmpfs /run 		 Normal
+/dev/disk/by-uuid/dfe2166c-b843-4f1f-a7fc-8dcca71cf087 / 		 Normal
+tmpfs /run/lock 		 Normal
+tmpfs /run/shm 		 Normal
+/dev/sda6 /cache 		 Caution
+
+*********************************************************************
+		     Memory 
+*********************************************************************
+
+=> Physical Memory
+
+Total	Used	Free	%Free
+
+1.94GB	1.78GB 	0.16GB	8%
+
+=> Swap Memory
+
+Total	Used	Free	%Free
+
+0.92GB	0GB	0.92GB	100%
+

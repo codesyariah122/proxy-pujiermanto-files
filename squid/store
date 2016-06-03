@@ -1,0 +1,62 @@
+#!/usr/bin/perl
+$|=1;
+while (<>) {
+my $chan = "";
+if (s/^(\d+\s+)//o) {
+$chan = $1;
+}
+@X = split(" ",$_);
+ 
+if ($X[0] =~ m/^https?\:\/\/.*(youtube|googlevideo).*(videoplayback|videogoodput).*/){
+        @itag = m/[&?](itag=[0-9]*)/;
+        @id = m/[&?]id\=([^\&\s]*)/;
+        @mime = m/[&?](mime\=[^\&\s]*)/;
+        @cpn = m/[&?]cpn\=([^\&\s]*)/;
+        @range = m/[&?](range=[^\&\s]*)/;
+    if ($X[1] =~ m/^https:\/\/www\.youtube\.com.*(embed|v)[=%&?\/](.*)/) {
+            @id = $2;
+        }
+        print $chan, "OK store-id=http://youtube.uji.ganteng/@id&@itag&@mime&@range\n" ;
+
+} elsif ($X[0] =~ m/http.*\.(fbcdn|akamaihd)\.net\/h(profile|photos).*[\d\w].*\/([\w]\d+x\d+\/.*\.[\d\w]{3}).*/) {
+	 print $chan, "OK store-id=http://fbcdn.uji.ganteng/" . $2 . "/" . $3 ;
+
+} elsif ($X[0] =~ m/^http(.*)static(.*)(akamaihd|fbcdn).net\/rsrc.php\/(.*\/.*\/(.*).(js|css|png|gif))(\?(.*)|$)/) {
+	 print $chan, "OK store-id=http://facebook.uji.ganteng/" . $5 . "." . $6 ;
+
+} elsif ($X[0] =~ m/^https?\:\/\/.*utm.gif.*/) {
+	 print $chan, "OK store-id=http://gif.uji.ganteng/__utm.gif";
+ 
+} elsif ($X[0] =~m/^https?\:\/\/.*\/speedtest\/(.*\.(jpg|txt)).*/) {
+	 print $chan, "OK store-id=http://speedtest.uji.ganteng/" . $1; 
+ 
+} elsif ($X[0] =~ m/^https?\:\/\/.*\/(.*\..*(mp4|3gp|flv))\?.*/) {
+	 print $chan, "OK store-id=http://video.uji.ganteng/streamvideo" . $1;
+
+} elsif ($X[0] =~ m/^https?\:\/\/c2lo\.reverbnation\.com\/audio_player\/ec_stream_song\/(.*)\?.*/) {
+	 print $chan, "OK store-id=http://song.uji.ganteng/streamaudio" . $1;
+ 
+} elsif ($X[0] =~ m/^https?\:\/\/.*\.c\.android\.clients\.google\.com\/market\/GetBinary\/GetBinary\/(.*\/.*)\?.*/) {
+	 print $chan, "OK store-id=http://mobile.uji.ganteng/" . $1;
+
+} elsif ($X[0] =~ m/^http:\/\/([a-z])[0-9]?(\.gstatic\.com.*|\.wikimapia\.org.*)/) {
+	 print $chan, "OK store-id=http://google.uji.ganteng/image" . $2;
+
+} elsif ($X[0] =~ m/^https?:\/\/.*(googleusercontent.com|blogspot.com)\/(.*)\/([a-z0-9]+)(-[a-z]-[a-z]-[a-z]+)?\/(.*\.(jpg|png))/){
+	 print $chan, "OK store-id=http://google.uji.ganteng/" . $5;
+
+} elsif ($X[0] =~ m/^https?:\/\/([a-z0-9.]*)(\.doubleclick\.net|\.quantserve\.com|.exoclick\.com|interclick.\com|\.googlesyndication\.com|\.auditude\.com|.visiblemeasures\.com|yieldmanager|cpxinteractive)(.*)/){
+	 print $chan, "OK store-id=http://google.uji.ganteng/ads" . $3;
+
+} elsif ($X[0] =~ m/^http\:\/\/.*\.4shared\.com\/download\/(.*)\/.*/) {
+	 print $chan, "OK store-id=http://4shared.uji.ganteng/download" . $1;
+
+} elsif ($X[0] =~ m/^http:\/\/(.*?)\.yimg\.com\/(.*?)\.yimg\.com\/(.*?)\?(.*)/) {
+	 print $chan, "OK store-id=http://yimg.uji.ganteng/img" . $3;
+
+
+} else {
+
+        print $chan, "ERR\n" ;
+}
+}

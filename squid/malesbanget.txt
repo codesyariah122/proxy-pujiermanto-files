@@ -1,0 +1,5 @@
+.windowsupdate.com 
+.dl.ws.microsoft.com 
+.crl.microsoft.com
+.avast.com
+.cache.pack.google.com

@@ -1,0 +1,46 @@
+.*\.*chrome\w+.*updater.exe.*
+^http:.*\.microsoft\.com\/download\/.*\.?
+^http:\/\/.*\.*pack.google.com.*
+^http:\/\/[a-z]+.*merdeka.com\/.*\.*\/[a-z0-9A-Z]+.*
+^http:\/\/.*channelbox\.iklanbaris\.detik\.com\/.*
+^http:\/\/bs.serving-sys.com\/BurstingPipe\/adServer.bs.*
+^http:\/\/.*newopenx.detik.com\/delivery\/.*
+(banners)\.(adultfriendfinder)\.(com|net|mobi)
+youtube.com/api/stats/(ads|watchtime|qoe)?
+^http:\/\/bs.serving-sys.com\/BurstingPipe\/adServer.bs.*
+(doubleclick)\.(net|com)
+# google-analytics|
+# adf\.ly.*(entry\.js|link-converter\.js|entry_script.*\.js|puscript.*\.php|main\.html)
+safebrowsing.clients.google.com
+safebrowsing-cache.google.com
+safebrowsing.google.com
+# +adf.ly/callback
+.*\.*official.cliponyu.*
+.*cliponyu.com/.*
+.*clients2.googleusercontent.com/
+.*youtube\.com\/ad_frame?
+.*(s|s[0-90-9])\.youtube\.com
+.*googlesyndication\.com
+.doubleclick\.net
+^http:\/\/(.*\.*cli\.ambient-platform\.com)(.*\.*\W+)([^\&\s]*).*
+.*\.*ambVideo?.*
+.*\.*vjs-ad-notification.*
+^http:\/\/.*cli\.ambient-platform\.com\/.*
+^http:\/\/googleads\.*
+^http:\/\/(ad|ads|ads[0-90-9]|ads\d|kad|a[b|d]|ad\d|adserver|adsbox)\.[a-z0-9]*\.[a-z][a-z]*
+^http:\/\/openx\.[a-z0-9]*\.[a-z][a-z]*
+^http:\/\/[a-z0-9]*\.openx\.net\/
+^http:\/\/[a-z0-9]*\.u-ad\.info\/
+^http:\/\/adserver\.bs\/
+^http:\/\/adf\.ly
++video-sin1-1.xx.fbcdn.net/
++video-hkg3-1.xx.fbcdn.net/
++video-sit4-1.xx.fbcdn.net/
+^http:\/\/.*\.*(ambient-platform.com).*\.*\W+([^\&\s]*)\/(image|gif)\?*
+^http:\/\/.*mediaquark.com\/.*
+^http:\/\/.*admaxserver.com.*
+^http:\/\/.*admax.effectivemeasure.net.*
+^http:\/\/.*\.*jasjus.net.*
+^http:\/\/.*appexbingfinance.trafficmanager.net.*
+^http:\/\/.*avp.innity.com.*
+^http:\/\/.*id.innityserve.net.*

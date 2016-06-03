@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HIPSTER</title>
+<script src="js/jquery.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css"> 
+
+
+  </head>
+
+  <body><center><FORM method="POST" action = "proses.php">
+
+<!------------------------------->
+<style>
+.center-table
+{
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+  body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .navbar {
+    margin-bottom: 20px;
+  }
+  </style>
+<!--------------------------------->
+<div class="container">
+
+<h2>Data Karyawan</h2>
+<p>Silahkan Isi Daftar</p>
+<hr>
+
+<div class="container">
+<div class="row">
+  <div class="col-md-4 center-table">
+<table class="table">
+</thead>
+<tbody>
+    <tr class="success">
+      <td>NIP</td>
+      <td><INPUT type = "text" name = "NIP"></td>
+    </tr>
+
+    <tr class="danger">
+      <td >Nama</td>
+      <td><INPUT type = "text" name = "Nama"></td>
+    </tr>
+
+    <tr class="info">
+      <td>Golongan</td>
+      <td><INPUT type = "text" name = "Golongan"></td>
+    </tr>
+
+    <tr class="info">
+      <td>Gender</td>
+    <td><input type="radio" value="Laki-laki" name="Gender">Laki-Laki<br>
+        <input type="radio" value="Perempuan" name="Gender">perempuan<br></td>
+    </tr>
+
+    <tr class="success">
+    <td>jumlah Anak</td>
+    <td><INPUT type = "text" name = "JumlahAnak"></td>
+    </tr>
+
+  <tr class="danger">
+  <td>Masa Kerja</td>
+  <td><INPUT type = "text" name = "MasaKerja"></td>
+  </tr>
+
+</table></thead></tbody></div></div>
+
+<br>
+<INPUT type = "SUBMIT" class="btn btn-success" name="submit">
+<INPUT type = "RESET" class="btn btn-danger" name="reset">
+<br><br><br>
+<td>
+<a href="tabel.php" class="btn btn-info" role="button">Lihat Data Karyawan</a>
+</td>
+
+<br>
+
+</div>
+</div>
+</div> <!-- /container -->
+   		<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+</body></html>
