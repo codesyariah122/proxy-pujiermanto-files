@@ -7,7 +7,7 @@
         <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
       </div>
       <div class="modal-body">
-      Untuk tutorial yang lain Silahkan Kunjungi <a href="http://www.acchoblues.blogspot.com" target="_blank">www.acchoblues.blogspot.com</a>
+      Silahkan kunjungi <a href="http://www.acchoblues.blogspot.com" target="_blank">www.hipster.comli.com</a>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
